@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Jersey 25';
+    src: url('/fonts/Jersey25-Regular/Jersey25-Regular.woff2') format('woff2'),
+        url('/fonts/Jersey25-Regular/Jersey25-Regular.woff') format('woff'),
+        url('/fonts/Jersey25-Regular/Jersey25-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --nav-font-family: 'Jersey 25', serif;
+    --nav-font-size: 30px;
+    --nav-font-weight: bolder;
+    --animation-transform: scale(1.2);
+    --color-text: #ec9e0c;
+    --text-shadow: 0 1px 5px var(--color-text);
+}
+
+header {
+    /*position: sticky;*/
+    display: flex;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    align-items: center;
+    box-shadow: 0 4px 15px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+
+.logo-link {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.logo-menu {
+    width: 64px;
+    height: 64px;
+    margin: 5px 30px;
+    transition: all 0.3s;
+}
+
+.logo-text {
+    font-family: var(--nav-font-family);
+    font-size: var(--nav-font-size);
+    font-weight: var(--nav-font-weight);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+#main-menu * {
+    align-items: center;
+    text-decoration: none;
+}
+
+#main-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+#main-menu ul li {
+    font-family: var(--nav-font-family);
+    font-size: var(--nav-font-size);
+    font-weight: var(--nav-font-weight);
+}
+
+#main-menu ul li a {
+    color: var(--color-text);
+}
+
+#login-btn {
+    margin: 0px 30px;
+    padding: 10px 15px;
+    border: 2px solid #525252;
+    border-radius: 150px;
+    background-color: #303030;
+}
+
+/* animations */
+#login-btn:hover {
+    cursor: not-allowed;
+}
+
+.logo-text {
+    transition: all 0.3s;
+}
+
+.logo-text:hover {
+    transform: var(--animation-transform);
+    text-shadow: var(--text-shadow);
+}
+
+#main-menu ul li {
+    transition: all 0.3s;
+}
+
+#main-menu ul li:hover {
+    transform: var(--animation-transform);
+    text-shadow: var(--text-shadow);
+}
+
+header:hover {
+    padding: 20px;
+}
+
+.logo-menu:hover {
+    transform: scale(1.5);
+}
+
+/* animations keyframes */
+
+/* media */
